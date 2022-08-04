@@ -1,0 +1,315 @@
+html,body{
+    padding: 0%;
+    border: 0%;
+    background-color: #42464D; 
+    overflow-y: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+
+.desktop{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;    
+}
+
+.desktop_container{
+    margin: 0 auto;
+    width: 90%;
+    height: 90%;
+    display: flex;
+}
+
+.desktop_left_side{
+    height: 100%;
+    width: 40%;
+}
+
+.left_header{
+    display: flex;
+    width: 100%;
+    height: 100px;
+}
+
+.right_header{
+    height: 100px;
+    width: 100%;
+    background-color: #2F3136;
+    border-radius: 15px;
+    color:white;
+    font-weight: bolder;
+    text-align: center;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-shadow: 1px 0 #ffffff;
+    letter-spacing:1px;
+}
+
+.right_header_text_container{
+    width: 100%;
+    height: 40px;
+}
+
+.desktop_right_side{
+    height: 100%;
+    width: 60%;
+}
+
+.send_message_container{
+    width: 100%;
+    height: 500px;
+    margin-top: 50px;
+    border-radius: 15px;
+    background-color: #2F3136;
+}
+
+.send_message{
+    font-size:29px;
+    color:#ffffff;
+    font-weight:bolder;
+    margin-top: 50px;
+    width: 210px;
+}
+
+.send_message:hover{
+    cursor: pointer;
+}
+
+.create_embed{
+    font-size:29px;
+    color:#96989D;
+    font-weight:bolder;
+    margin-top: 50px;
+    width: 210px;
+}
+
+.create_embed:hover{
+    cursor:pointer;
+    color:#ffffff;
+}
+
+.select_channel_container{
+    width: 100%;
+    height: 55px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 35px;
+    position: relative;
+    
+}
+
+.content_box_container{
+    width: 100%;
+    height: 250px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 30px;
+}
+
+.file_upload_container{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 30px;
+    margin-top: 25px;
+}
+
+.myfile::-webkit-file-upload-button {
+    visibility: hidden;
+    user-select: none;
+}
+
+.myfile{
+    background: #202225;
+    color: #f5f6fa;
+    width: 100%;
+    height: 50px;
+    border:none;
+    border-radius: 8px;
+    font-size: 20px;
+    padding-top: 5px;
+}
+
+label {
+    cursor: pointer;
+    /* Style as you please, it will become the visible UI component. */
+ }
+ 
+ #upload-photo {
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+ }
+
+.logout{
+    border-radius:10px;
+    color:white;
+    background-color:#D83C3E;
+    border:none;
+    margin-top:50px;
+    font-size:29px;
+    font-weight:400px;
+    height: 60px;
+    width: 210px;
+}
+
+.send_button_container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+}
+
+.send_button{
+    border-radius:10px;
+    color:white;
+    background-color:#5865F2;
+    border:none;
+    margin-top:40px;
+    font-size:20px;
+    font-weight:400px;
+    height: 50px;
+    width: 400px;
+    margin-right: 55px;
+}
+
+.send_button:hover {
+    background-color: #4954cb;
+    cursor: pointer;
+}
+
+.send_button:active {
+    background-color: #5a65fd;
+    cursor: pointer;
+}
+
+
+.content_box{
+    width: 90%;
+    border: none;
+    height: 210px;
+    background: #202225;
+    border-radius: 8px;
+    resize: none;
+    color:white;
+    font-size: 20px;
+    padding: 20px;
+}
+
+.content_box:focus{
+    outline: none !important;
+    border: none;
+}
+
+.logout:hover {
+    background-color: #a22d2f;
+    cursor: pointer;
+}
+
+.logout:active {
+    background-color: #631617;
+    cursor: pointer;
+}
+
+.select-box {
+    display: flex;
+    width: 400px;
+    flex-direction: column;
+  }
+  
+  .select-box .options-container {
+    background: #202225;
+    color: #f5f6fa;
+    max-height: 0;
+    width: 100%;
+    opacity: 0;
+    transition: all 0.4s;
+    border-radius: 8px;
+    overflow: hidden;
+    font-weight: bold;
+    order: 1;
+    font-size: 20px;
+  }
+  
+  .selected {
+    background: #202225;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    color: #f5f6fa;
+    position: relative;
+    font-weight: bold;
+    order: 0;
+    font-size: 20px;
+  }
+  
+  .selected::after {
+    content: "";
+    background: url("img/arrow-down.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    height: 100%;
+    width: 32px;
+    right: 10px;
+    top: 10px;
+    transition: all 0.4s;
+  }
+  
+  .select-box .options-container.active {
+    max-height: 240px;
+    opacity: 1;
+    overflow-y: scroll;
+  }
+  
+  .select-box .options-container.active + .selected::after {
+    transform: rotateX(180deg);
+    top: -13px;
+  }
+  
+  .select-box .options-container::-webkit-scrollbar {
+    width: 8px;
+    background: #0d141f;
+    border-radius: 0 8px 8px 0;
+  }
+  
+  .select-box .options-container::-webkit-scrollbar-thumb {
+    background: #525861;
+    border-radius: 0 8px 8px 0;
+  }
+  
+  .select-box .option,
+  .selected {
+    padding: 12px 24px;
+    cursor: pointer;
+  }
+  
+  .select-box .option:hover {
+    background: #414b57;
+  }
+  
+  .select-box label {
+    cursor: pointer;
+  }
+  
+  .select-box .option .radio {
+    display: none;
+  }
+
+@media screen and (min-width: 0px) and (max-width:600px) {
+    .desktop{
+        display : none;
+    }
+  }
+
+  @media screen and (min-width: 821px){
+    .mobile{
+        display : none;
+    }
+  }
