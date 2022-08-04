@@ -4,6 +4,13 @@ html,body{
     background-color: #42464D; 
     overflow-y: hidden;
     font-family: 'Poppins', sans-serif;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
 }
 
 .desktop{
@@ -203,6 +210,17 @@ label {
     padding: 20px;
 }
 
+.content_box::-webkit-scrollbar {
+    width: 8px;
+    background: #0d141f;
+    border-radius: 8px;
+  }
+  
+  .content_box::-webkit-scrollbar-thumb {
+    background: #525861;
+    border-radius: 8px;
+  }
+
 .content_box:focus{
     outline: none !important;
     border: none;
@@ -251,7 +269,7 @@ label {
   
   .selected::after {
     content: "";
-    background: url("img/arrow-down.svg");
+    background: url("https://us-east-1.tixte.net/uploads/omega.tixte.co/arrow-down.svg");
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute;
@@ -276,12 +294,12 @@ label {
   .select-box .options-container::-webkit-scrollbar {
     width: 8px;
     background: #0d141f;
-    border-radius: 0 8px 8px 0;
+    border-radius: 8px;
   }
   
   .select-box .options-container::-webkit-scrollbar-thumb {
     background: #525861;
-    border-radius: 0 8px 8px 0;
+    border-radius: 8px;
   }
   
   .select-box .option,
@@ -300,6 +318,28 @@ label {
   
   .select-box .option .radio {
     display: none;
+  }
+
+  .form_container{
+    height: 200px;
+    width: 400px;
+    margin: 0 auto;
+  }
+
+  .input_bar{
+    background-color: #202225;
+    width: 390px;
+    height: 50px;
+    border: none;
+    padding: 0 8px;
+    font-size: 20px;
+    border-radius: 7px;
+    margin-bottom: 30px;
+    color: white;
+  }
+
+  .input_bar:focus{
+    outline: none;
   }
 
 @media screen and (min-width: 0px) and (max-width:600px) {
